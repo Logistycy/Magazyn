@@ -100,3 +100,6 @@ C:\Users\Lenovo\Desktop\Magazyn\Magazyn\obj\Debug\Magazyn.csproj.GenerateResourc
 C:\Users\Wojtek\Desktop\Magazyn\Magazyn\bin\Debug\Magazyn.exe.config
 C:\Users\Wojtek\Desktop\Magazyn\Magazyn\obj\Debug\Magazyn.exe
 C:\Users\Wojtek\Desktop\Magazyn\Magazyn\obj\Debug\Magazyn.pdb
+C:\Users\Lenovo\Documents\GitHub\magazyn\Magazyn\Magazyn\Magazyn\bin\Debug\Magazyn.exe.config
+C:\Users\Lenovo\Documents\GitHub\magazyn\Magazyn\Magazyn\Magazyn\obj\Debug\Magazyn.exe
+C:\Users\Lenovo\Documents\GitHub\magazyn\Magazyn\Magazyn\Magazyn\obj\Debug\Magazyn.pdb

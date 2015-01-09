@@ -49,11 +49,13 @@ namespace Magazyn
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText ="INSERT INTO Produkty (Id_Produkt,Nazwa,Ilość) values("+txtId.Text+", '"+txtNazwa.Text+"',"+txtIlosc.Text+")";
+                cmd.CommandText = "INSERT INTO Produkty (Id_Produkt,Nazwa,Ilość) SELECT MAX(Id_Produkt)+1 , '" + txtNazwa.Text + "'," + txtIlosc.Text + " FROM Produkty";
+
                 cmd.ExecuteNonQuery();
               
                 MessageBox.Show("Dodano pozycje", "Messeg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              
+                txtNazwa.Text = "";
+                txtIlosc.Text = "";
 
             }
             catch 

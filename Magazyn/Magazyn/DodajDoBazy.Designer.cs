@@ -32,19 +32,17 @@
             this.produktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baza_magazynuDataSet = new Magazyn.Baza_magazynuDataSet();
             this.produktyTableAdapter = new Magazyn.Baza_magazynuDataSetTableAdapters.ProduktyTableAdapter();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNazwa = new System.Windows.Forms.TextBox();
-            this.txtIdd = new System.Windows.Forms.Label();
             this.Nazwa = new System.Windows.Forms.Label();
             this.Ilosc = new System.Windows.Forms.Label();
             this.txtIlosc = new System.Windows.Forms.TextBox();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.idProduktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ilośćDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza_magazynuDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,28 +62,12 @@
             // 
             this.produktyTableAdapter.ClearBeforeFill = true;
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(82, 24);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 0;
-            // 
             // txtNazwa
             // 
             this.txtNazwa.Location = new System.Drawing.Point(82, 50);
             this.txtNazwa.Name = "txtNazwa";
             this.txtNazwa.Size = new System.Drawing.Size(100, 20);
             this.txtNazwa.TabIndex = 1;
-            // 
-            // txtIdd
-            // 
-            this.txtIdd.AutoSize = true;
-            this.txtIdd.Location = new System.Drawing.Point(34, 27);
-            this.txtIdd.Name = "txtIdd";
-            this.txtIdd.Size = new System.Drawing.Size(16, 13);
-            this.txtIdd.TabIndex = 2;
-            this.txtIdd.Text = "Id";
             // 
             // Nazwa
             // 
@@ -136,6 +118,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(346, 181);
             this.dataGridView1.TabIndex = 7;
             // 
+            // idProduktDataGridViewTextBoxColumn
+            // 
+            this.idProduktDataGridViewTextBoxColumn.DataPropertyName = "Id_Produkt";
+            this.idProduktDataGridViewTextBoxColumn.HeaderText = "Id_Produkt";
+            this.idProduktDataGridViewTextBoxColumn.Name = "idProduktDataGridViewTextBoxColumn";
+            // 
+            // nazwaDataGridViewTextBoxColumn
+            // 
+            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
+            // 
+            // ilośćDataGridViewTextBoxColumn
+            // 
+            this.ilośćDataGridViewTextBoxColumn.DataPropertyName = "Ilość";
+            this.ilośćDataGridViewTextBoxColumn.HeaderText = "Ilość";
+            this.ilośćDataGridViewTextBoxColumn.Name = "ilośćDataGridViewTextBoxColumn";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(496, 199);
@@ -156,24 +156,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // idProduktDataGridViewTextBoxColumn
-            // 
-            this.idProduktDataGridViewTextBoxColumn.DataPropertyName = "Id_Produkt";
-            this.idProduktDataGridViewTextBoxColumn.HeaderText = "Id_Produkt";
-            this.idProduktDataGridViewTextBoxColumn.Name = "idProduktDataGridViewTextBoxColumn";
-            // 
-            // nazwaDataGridViewTextBoxColumn
-            // 
-            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
-            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
-            // 
-            // ilośćDataGridViewTextBoxColumn
-            // 
-            this.ilośćDataGridViewTextBoxColumn.DataPropertyName = "Ilość";
-            this.ilośćDataGridViewTextBoxColumn.HeaderText = "Ilość";
-            this.ilośćDataGridViewTextBoxColumn.Name = "ilośćDataGridViewTextBoxColumn";
-            // 
             // DodajDoBazy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,9 +168,7 @@
             this.Controls.Add(this.txtIlosc);
             this.Controls.Add(this.Ilosc);
             this.Controls.Add(this.Nazwa);
-            this.Controls.Add(this.txtIdd);
             this.Controls.Add(this.txtNazwa);
-            this.Controls.Add(this.txtId);
             this.Name = "DodajDoBazy";
             this.Text = "DodajDoBazy";
             this.Load += new System.EventHandler(this.DodajDoBazy_Load);
@@ -205,9 +185,7 @@
         private Baza_magazynuDataSet baza_magazynuDataSet;
         private System.Windows.Forms.BindingSource produktyBindingSource;
         private Baza_magazynuDataSetTableAdapters.ProduktyTableAdapter produktyTableAdapter;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNazwa;
-        private System.Windows.Forms.Label txtIdd;
         private System.Windows.Forms.Label Nazwa;
         private System.Windows.Forms.Label Ilosc;
         private System.Windows.Forms.TextBox txtIlosc;
