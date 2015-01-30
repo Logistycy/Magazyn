@@ -14,7 +14,7 @@ namespace Magazyn
 {
     public partial class MainForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Lenovo\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Michał\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
 
 
         public MainForm()
@@ -219,6 +219,29 @@ namespace Magazyn
             Zamowienie_1 Z1 = new Zamowienie_1();
            Z1.Show();
         }
+
+        private void produktyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RaportProdukty RP = new RaportProdukty();
+
+            RP.Show();
+        }
+
+        private void klienciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportKlienci RK = new RaportKlienci();
+            RK.Show();
+        }
+
+        private void pomocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pomoc P = new Pomoc();
+            P.Show();
+        }
+
+      
+
+        
 
        
     }

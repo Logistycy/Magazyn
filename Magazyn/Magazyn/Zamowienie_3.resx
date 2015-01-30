@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Zamowienia_ProduktyBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 17</value>
+  </metadata>
+  <metadata name="Baza_magazynuDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="KlienciBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAkMAAAA1CAIAAADNv3g5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAA9VSURBVHhe7Z1rcFTlGcfRYjuiyMjgiFrF8VqUaql3AUmA
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAA9VSURBVHhe7Z1rcFTlGcfRYjuiyMjgiFrF8VqUaql3AUmA
         ccAvrTN1+sGOnWodp05n+qH90K/ai9W2M/3Ub50qGJaE3CAEExJCQiDkpliIBEISBHIjIZtsNpfdzdl9
         +3/P8+7J2T3L7gb2cs7u85v/ZM55z7tnj75Pnt+e3dUsucDYgH6dvr6+3t7e8+fP9/T0nNPBNkbSDZ7X
         gK6EoAujK2QcAS0coJVVoxcufH2294/V7e+XN79ffozDSTooGJnflMn8rrz52KlzVFrpQ3UiHVXNOihj
@@ -190,4 +199,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Zamowienia_ProduktyTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>448, 17</value>
+  </metadata>
+  <metadata name="KlienciTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 56</value>
+  </metadata>
 </root>

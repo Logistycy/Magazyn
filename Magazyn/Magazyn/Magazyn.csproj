@@ -26,6 +26,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,10 +47,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -106,8 +112,26 @@
     <Compile Include="MainForm2.Designer.cs">
       <DependentUpon>MainForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pomoc.Designer.cs">
+      <DependentUpon>Pomoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaportKlienci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportKlienci.Designer.cs">
+      <DependentUpon>RaportKlienci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportProdukty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportProdukty.Designer.cs">
+      <DependentUpon>RaportProdukty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuń.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +180,9 @@
     <EmbeddedResource Include="MainForm2.resx">
       <DependentUpon>MainForm2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pomoc.resx">
+      <DependentUpon>Pomoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -164,7 +191,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RaportKlienci.resx">
+      <DependentUpon>RaportKlienci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportProdukty.resx">
+      <DependentUpon>RaportProdukty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Usuń.resx">
       <DependentUpon>Usuń.cs</DependentUpon>
     </EmbeddedResource>

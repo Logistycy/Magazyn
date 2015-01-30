@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label id_KlientaLabel;
             System.Windows.Forms.Label nazwaLabel;
             System.Windows.Forms.Label nIPLabel;
             System.Windows.Forms.Label rEGONLabel;
@@ -39,14 +38,12 @@
             this.klienciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klienciTableAdapter = new Magazyn.Baza_magazynuDataSetTableAdapters.KlienciTableAdapter();
             this.tableAdapterManager = new Magazyn.Baza_magazynuDataSetTableAdapters.TableAdapterManager();
-            this.id_KlientaTextBox = new System.Windows.Forms.TextBox();
             this.nazwaTextBox = new System.Windows.Forms.TextBox();
             this.nIPTextBox = new System.Windows.Forms.TextBox();
             this.rEGONTextBox = new System.Windows.Forms.TextBox();
-            this.btnexit = new System.Windows.Forms.Button();
+            this.btndalej = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            id_KlientaLabel = new System.Windows.Forms.Label();
             nazwaLabel = new System.Windows.Forms.Label();
             nIPLabel = new System.Windows.Forms.Label();
             rEGONLabel = new System.Windows.Forms.Label();
@@ -54,15 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.baza_magazynuDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klienciBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // id_KlientaLabel
-            // 
-            id_KlientaLabel.AutoSize = true;
-            id_KlientaLabel.Location = new System.Drawing.Point(186, 91);
-            id_KlientaLabel.Name = "id_KlientaLabel";
-            id_KlientaLabel.Size = new System.Drawing.Size(54, 13);
-            id_KlientaLabel.TabIndex = 2;
-            id_KlientaLabel.Text = "Id Klienta:";
             // 
             // nazwaLabel
             // 
@@ -124,14 +112,6 @@
             this.tableAdapterManager.Zamowienia_ProduktyTableAdapter = null;
             this.tableAdapterManager.ZamowieniaTableAdapter = null;
             // 
-            // id_KlientaTextBox
-            // 
-            this.id_KlientaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klienciBindingSource, "Id_Klienta", true));
-            this.id_KlientaTextBox.Location = new System.Drawing.Point(246, 88);
-            this.id_KlientaTextBox.Name = "id_KlientaTextBox";
-            this.id_KlientaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.id_KlientaTextBox.TabIndex = 3;
-            // 
             // nazwaTextBox
             // 
             this.nazwaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klienciBindingSource, "Nazwa", true));
@@ -144,6 +124,7 @@
             // 
             this.nIPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klienciBindingSource, "NIP", true));
             this.nIPTextBox.Location = new System.Drawing.Point(246, 140);
+            this.nIPTextBox.MaxLength = 9;
             this.nIPTextBox.Name = "nIPTextBox";
             this.nIPTextBox.Size = new System.Drawing.Size(100, 20);
             this.nIPTextBox.TabIndex = 7;
@@ -152,19 +133,20 @@
             // 
             this.rEGONTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klienciBindingSource, "REGON", true));
             this.rEGONTextBox.Location = new System.Drawing.Point(246, 166);
+            this.rEGONTextBox.MaxLength = 9;
             this.rEGONTextBox.Name = "rEGONTextBox";
             this.rEGONTextBox.Size = new System.Drawing.Size(100, 20);
             this.rEGONTextBox.TabIndex = 9;
             // 
-            // btnexit
+            // btndalej
             // 
-            this.btnexit.Location = new System.Drawing.Point(151, 222);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(89, 29);
-            this.btnexit.TabIndex = 10;
-            this.btnexit.Text = "Dalej";
-            this.btnexit.UseVisualStyleBackColor = true;
-            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            this.btndalej.Location = new System.Drawing.Point(151, 222);
+            this.btndalej.Name = "btndalej";
+            this.btndalej.Size = new System.Drawing.Size(89, 29);
+            this.btndalej.TabIndex = 10;
+            this.btndalej.Text = "Dalej";
+            this.btndalej.UseVisualStyleBackColor = true;
+            this.btndalej.Click += new System.EventHandler(this.btndalej_Click);
             // 
             // button1
             // 
@@ -183,9 +165,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(571, 338);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnexit);
-            this.Controls.Add(id_KlientaLabel);
-            this.Controls.Add(this.id_KlientaTextBox);
+            this.Controls.Add(this.btndalej);
             this.Controls.Add(nazwaLabel);
             this.Controls.Add(this.nazwaTextBox);
             this.Controls.Add(nIPLabel);
@@ -211,11 +191,10 @@
         private System.Windows.Forms.BindingSource klienciBindingSource;
         private Baza_magazynuDataSetTableAdapters.KlienciTableAdapter klienciTableAdapter;
         private Baza_magazynuDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox id_KlientaTextBox;
         private System.Windows.Forms.TextBox nazwaTextBox;
         private System.Windows.Forms.TextBox nIPTextBox;
         private System.Windows.Forms.TextBox rEGONTextBox;
-        private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.Button btndalej;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
     }

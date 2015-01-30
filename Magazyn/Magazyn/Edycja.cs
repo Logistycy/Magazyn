@@ -13,14 +13,14 @@ namespace Magazyn
 {
     public partial class Edycja : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Lenovo\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Michał\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
 
         public Edycja()
         {
             InitializeComponent();
         }
 
-      
+
 
         private void Edycja_Load(object sender, EventArgs e)
         {
@@ -43,12 +43,18 @@ namespace Magazyn
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
-                if (con.State == ConnectionState.Open)
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            try
+            {
+               
+                if ((String.IsNullOrEmpty(nazwaTextBox.Text)) || (String.IsNullOrEmpty(ilośćTextBox.Text)))
                 {
-                    con.Close();
+                    MessageBox.Show("Puste pole");
                 }
-                try
+                else
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
@@ -65,46 +71,47 @@ namespace Magazyn
                         MessageBox.Show("Błąd: Nie ma takiego id !");
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }
+            catch
+            {
+                MessageBox.Show("Id Produktu, Ilość musi być liczbą");
+            }
 
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             con.Close();
             this.Close();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from Produkty ";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-
-
+            {
+                con.Close();
             }
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Produkty ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-       
-        }
+
     }
+}
 

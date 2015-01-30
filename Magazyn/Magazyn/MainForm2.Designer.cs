@@ -44,6 +44,9 @@
             this.produktyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorzyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raportyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produktyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.klienciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baza_magazynuDataSet = new Magazyn.Baza_magazynuDataSet();
             this.produktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produktyTableAdapter = new Magazyn.Baza_magazynuDataSetTableAdapters.ProduktyTableAdapter();
@@ -105,7 +108,8 @@
             this.toolStripMenuItem1,
             this.wykresyToolStripMenuItem,
             this.pomocToolStripMenuItem,
-            this.autorzyToolStripMenuItem});
+            this.autorzyToolStripMenuItem,
+            this.raportyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(512, 24);
@@ -160,6 +164,7 @@
             this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
             this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomocToolStripMenuItem.Text = "Pomoc";
+            this.pomocToolStripMenuItem.Click += new System.EventHandler(this.pomocToolStripMenuItem_Click);
             // 
             // autorzyToolStripMenuItem
             // 
@@ -167,6 +172,29 @@
             this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.autorzyToolStripMenuItem.Text = "Autorzy";
             this.autorzyToolStripMenuItem.Click += new System.EventHandler(this.autorzyToolStripMenuItem_Click);
+            // 
+            // raportyToolStripMenuItem
+            // 
+            this.raportyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produktyToolStripMenuItem1,
+            this.klienciToolStripMenuItem});
+            this.raportyToolStripMenuItem.Name = "raportyToolStripMenuItem";
+            this.raportyToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.raportyToolStripMenuItem.Text = "Raporty";
+            // 
+            // produktyToolStripMenuItem1
+            // 
+            this.produktyToolStripMenuItem1.Name = "produktyToolStripMenuItem1";
+            this.produktyToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.produktyToolStripMenuItem1.Text = "Produkty";
+            this.produktyToolStripMenuItem1.Click += new System.EventHandler(this.produktyToolStripMenuItem1_Click);
+            // 
+            // klienciToolStripMenuItem
+            // 
+            this.klienciToolStripMenuItem.Name = "klienciToolStripMenuItem";
+            this.klienciToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.klienciToolStripMenuItem.Text = "Klienci";
+            this.klienciToolStripMenuItem.Click += new System.EventHandler(this.klienciToolStripMenuItem_Click);
             // 
             // baza_magazynuDataSet
             // 
@@ -226,5 +254,8 @@
         private Baza_magazynuDataSet baza_magazynuDataSet;
         private System.Windows.Forms.BindingSource produktyBindingSource;
         private Baza_magazynuDataSetTableAdapters.ProduktyTableAdapter produktyTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem raportyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produktyToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem klienciToolStripMenuItem;
     }
 }

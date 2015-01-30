@@ -15,7 +15,7 @@ namespace Magazyn
     public partial class Zamowienie_1 : Form
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Lenovo\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Michał\Desktop\Magazyn\Magazyn\Baza_magazynu.mdf;Integrated Security=True");
 
 
         public Zamowienie_1()
@@ -23,20 +23,19 @@ namespace Magazyn
             InitializeComponent();
         }
 
-        
-        
+
+
 
         private void Zamowienie_1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baza_magazynuDataSet.Produkty' table. You can move, or remove it, as needed.
             this.produktyTableAdapter.Fill(this.baza_magazynuDataSet.Produkty);
 
-          
 
-            
 
-            // TODO: This line of code loads data into the 'baza_magazynuDataSet.Zamowienia_Produkty' table. You can move, or remove it, as needed.
-            //this.zamowienia_ProduktyTableAdapter.Fill(this.baza_magazynuDataSet.Zamowienia_Produkty);
+
+
+
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -44,12 +43,12 @@ namespace Magazyn
             this.Close();
         }
 
-      
 
-     
+
+
         private void btnZamow_Click_1(object sender, EventArgs e)
         {
-            
+
 
             int iloscZBazy;
             int iloscZwpisania;
@@ -78,11 +77,11 @@ namespace Magazyn
                     MessageBox.Show("Dodano pozycje", "Messeg", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     anInteger3 = iloscZBazy - iloscZwpisania;
-                   ilośćTextBox.Text =  anInteger3.ToString();
+                    ilośćTextBox.Text = anInteger3.ToString();
 
-                   cmd.CommandText = "UPDATE Produkty SET Ilość ='" + ilośćTextBox.Text + "'  WHERE Id_Produkt = " + id_ProduktTextBox.Text + " ;";
+                    cmd.CommandText = "UPDATE Produkty SET Ilość ='" + ilośćTextBox.Text + "'  WHERE Id_Produkt = " + id_ProduktTextBox.Text + " ;";
 
-                 
+
 
 
                     this.textboxwpisana.Text = "0";
@@ -122,18 +121,19 @@ namespace Magazyn
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
-                Zamowienie_2 Z2 = new Zamowienie_2();
 
-                Z2.Show();
-                this.Close();
-          
-            
+
+            Zamowienie_2 Z2 = new Zamowienie_2();
+
+            Z2.Show();
+            this.Close();
+
+
         }
 
         private void ilośćTextBox_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -142,14 +142,14 @@ namespace Magazyn
 
         }
 
-      
-
-       
 
 
-       
 
-      
+
+
+
+
+
 
     }
 }

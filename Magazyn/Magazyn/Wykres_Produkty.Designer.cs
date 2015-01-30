@@ -54,6 +54,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Ilość produktów w magazynie";
             series1.XValueMember = "Nazwa";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             series1.YValueMembers = "Ilość";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(777, 423);
